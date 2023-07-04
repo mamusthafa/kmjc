@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Protest Against Uniform Civil Code</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/starter-template/">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body style="background-color: #004d7a;">
+
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+      <a class="navbar-brand" href="index.html">Karnataka Muslim Jamaath</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="english.html">English</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="kannada.html">Kannada</a>
+          </li>
+      
+         
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container pt-5">
+ 
+  
+  <div class="row">
+    <div class="col-2">
+      
+    </div>
+    <div class="col-md-8 col-sm-6" style="padding:50px;background-color: #fff;">
+    
+
+      <div class="card">
+        <div class="card-header">
+          <div class="mb-3 mt-3">
+            <label for="name">Enter your Name:</label>
+            <input type="text" class="form-control" id="name" name="name">
+          </div>
+          <div class="mb-3">
+            <label for="phone">Enter Mobile No:</label>
+            <input type="number" class="form-control" id="phone" name="phone">
+          </div>
+          <button class="btn btn-primary" id="composeEmailBtn">Compose Email</button>
+        </div>
+        <div class="card-body"><br><br>
+          <p>
+            To, <br>
+          The Member Secretary,<br>
+          Law Commission of India,<br>
+          4th Floor, Lok Nayak Bhawan,<br>
+          Khan Market, New Delhi,<br>
+          110 003.<br><br>
+          
+          Sub: Uniform Civil Code.<br><br>
+          
+          In response to Public Notice dated 14th June 2023 regarding Uniform Civil Code, I may bring the following for your perusal .<br><br>
+          1. India, being the biggest democratic republic in the world, has a fine tradition. One of the remarkable tradition is it's unity in diversity. The enactment of UCC is highly impractical even now because the demographic proportion of multi religious society has not changed in India.<br><br>
+          
+          2. The articles 25, 26 and 29 of our constitution envisages the right to believe, practice and promulgate any belief, faith and practice to it's citizens. The enactment of UCC will be against these articles.<br><br>
+          
+          3. In India, followers of various religions, tribes and sections have their own beliefs and practices. Through UCC this indigenous unity will be destroyed and will cause undesirable chaos and problems in our nation.<br><br>
+          
+          4. India being a secular state and has not adopted any religion of its own officially shall remain as at present, it must not do anything that would jeopardise the people's religious and cultural ethos.<br><br>
+          
+          5. The Constitution of India provides for the Right to freedom of religion of one's choice. With uniform civil code, and its compulsion, the scope of the freedom of religion will be destroyed.<br><br>
+          
+          6. Attempts to formulate and implement the Uniform Civil Code, mentioned in the Directive Principles of the Constitution under Article 44, are bound to affect the Rights to Freedom of Religion, duly assured in the Fundamental Rights which hold supremacy over other provisions of the Constitution and may give rise to the Communal Disturbances across our beloved Country.<br><br>
+          
+          7. In order to maintain the Peace and tranquillity and the privilege of Unity in Diversity throughout India, it is just and prudent to set aside the issue of UCC in National Interest.<br><br>
+          
+          8. Hence I strongly oppose the UCC and request to do away any step to bring UCC.<br><br>
+          
+          YOUR NAME<br>
+          
+           </p>
+        </div>
+      </div>
+    
+    </div> 
+  </div>
+
+  
+</main><!-- /.container -->
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+  $(document).ready(function() {
+    var name, phone;
+
+    $("#name").on("input", function() {
+      name = $(this).val();
+      console.log("Name:", name);
+    });
+    
+    $("#phone").on("input", function() {
+      phone = $(this).val();
+      console.log("Phone:", phone);
+    });
+    
+    function openEmailComposer() {
+      // Define the default email details
+      var senderEmail = "sender@example.com";
+
+
+      var ccEmails = "ma.musthafa6@gmail.com";
+      var toEmails = "digitalcoorg@gmail.com";
+      var subject = "Rejection of Uniform Civil Code";
+
+
+    // var ccEmails = "connect@mygov.nic.in, wim-rb@rb.nic.in, secy.president@rb.nic.in";
+    // var toEmails = "membersecretary-lci@gov.in";
+    // var subject = "Rejection of Uniform Civil Code";
+      
+      // Concatenate name and phone number values in the email_body variable
+      var email_body = `
+      To, 
+      The Member Secretary,
+      Law Commission of India,
+      4th Floor, Lok Nayak Bhawan,
+      Khan Market, New Delhi,
+      110 003.
+      
+      Sub: Uniform Civil Code.
+      
+      In response to Public Notice dated 14th June 2023 regarding Uniform Civil Code, I may bring the following for your perusal .
+      1. India, being the biggest democratic republic in the world, has a fine tradition. One of the remarkable traditions is its unity in diversity. The enactment of UCC is highly impractical even now because the demographic proportion of multi-religious society has not changed in India.
+      
+      2. The articles 25, 26, and 29 of our constitution envisage the right to believe, practice, and promulgate any belief, faith, and practice to its citizens. The enactment of UCC will be against these articles.
+      
+      3. In India, followers of various religions, tribes, and sections have their own beliefs and practices. Through UCC, this indigenous unity will be destroyed and will cause undesirable chaos and problems in our nation.
+      
+      4. India being a secular state and has not adopted any religion of its own officially shall remain as present, it must not do anything that would jeopardize the people's religious and cultural ethos.
+      
+      5. The Constitution of India provides for the right to freedom of religion of one's choice. With a uniform civil code and its compulsion, the scope of the freedom of religion will be destroyed.
+      
+      6. Attempts to formulate and implement the Uniform Civil Code, mentioned in the Directive Principles of the Constitution under Article 44, are bound to affect the Rights to Freedom of Religion, duly assured in the Fundamental Rights which hold supremacy over other provisions of the Constitution and may give rise to Communal Disturbances across our beloved Country.
+      
+      7. In order to maintain the peace and tranquillity and the privilege of Unity in Diversity throughout India, it is just and prudent to set aside the issue of UCC in National Interest.
+      
+      8. Hence, I strongly oppose the UCC and request to do away with any step to bring UCC.
+      
+      Name & Phone:
+      ${name}
+      ${phone}`;
+      
+      // URL for opening the Gmail compose email page with pre-filled fields
+      var url = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(toEmails) + "&cc=" + encodeURIComponent(ccEmails) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(email_body) + "&tf=1";
+      
+      // Open the Gmail compose email page in a new tab/window
+      window.open(url, "_blank");
+    }
+    
+    // Attach the openEmailComposer function to the button click event
+    $("#composeEmailBtn").click(openEmailComposer);
+  });
+</script>
+</body>
+</html>
+
+
+
+
+
+
