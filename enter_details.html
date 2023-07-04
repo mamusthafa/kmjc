@@ -173,8 +173,8 @@
       ${phone}`;
       
       // URL for opening the Gmail compose email page with pre-filled fields
-      var url = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(toEmails) + "&cc=" + encodeURIComponent(ccEmails) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(email_body) + "&tf=1";
-      
+      //var url = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(toEmails) + "&cc=" + encodeURIComponent(ccEmails) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(email_body) + "&tf=1";
+      var url = "mailto:" + encodeURIComponent(toEmails) + "?cc=" + encodeURIComponent(ccEmails) + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(email_body);
       // Open the Gmail compose email page in a new tab/window
       window.open(url, "_blank");
     }
