@@ -43,7 +43,7 @@
       </div>
     </nav>
 
-    <main role="main" class="container pt-5 mt-2">
+    <main role="main" class="container pt-5">
  
   
   <div class="row">
@@ -63,7 +63,7 @@
             <label for="phone">Enter Mobile No:</label>
             <input type="number" class="form-control" id="phone" name="phone">
           </div>
-          <button class="btn btn-primary" id="composeEmailBtn">Send</button>
+          <button class="btn btn-primary" id="composeEmailBtn">Compose Email</button>
         </div>
         <div class="card-body"><br><br>
           <p>
@@ -158,9 +158,9 @@
       Name & Phone:
       ${name}
       ${phone}`;
-  
+/*  
 
-      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   //var emailSubject = encodeURIComponent('Opposition to Uniform Civil Code');
   var subject = "Opposition to Uniform Civil Code";
   var emailTo = 'membersecretary-lci@gov.in';
@@ -173,8 +173,43 @@
   var emailLink = 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=' + emailTo + '&cc=' + emailCC + '&su=Opposition%20to%20Uniform%20Civil%20Code&body=' + encodeURIComponent(email_body);
   window.open(emailLink, '_blank');
 }
+*/
 
-    }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  
+  var subject = "Opposition to Uniform Civil Code";
+  var emailTo = 'membersecretary-lci@gov.in';
+  var emailCC = 'connect@mygov.nic.in, wim-rb@rb.nic.in, secy.president@rb.nic.in'; // Add the desired CC addresses here
+  var emailLink = 'mailto:' + emailTo + '?cc=' + emailCC + '&subject=' + subject + '&body=' + encodeURIComponent(email_body);
+  window.location.href = emailLink;
+  setTimeout(function() {
+    // Show success message
+    var successMessage = '<div class="alert alert-success" role="alert">Your message has been sent successfully.</div>';
+    document.getElementById('successMessageContainer').innerHTML = successMessage;
+    // Redirect to index.html after 5 seconds
+    setTimeout(function() {
+      window.location.href = 'index.html';
+    }, 5000);
+  }, 2000); // Delay the success message by 2 seconds before redirecting
+} else {
+  var emailTo = 'membersecretary-lci@gov.in';
+  var emailCC = 'connect@mygov.nic.in, wim-rb@rb.nic.in, secy.president@rb.nic.in'; // Add the desired CC addresses here
+  var emailLink = 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=' + emailTo + '&cc=' + emailCC + '&su=Opposition%20to%20Uniform%20Civil%20Code&body=' + encodeURIComponent(email_body);
+  window.open(emailLink, '_blank');
+  setTimeout(function() {
+    // Show success message
+    var successMessage = '<div class="alert alert-success" role="alert">Your message has been sent successfully.</div>';
+    document.getElementById('successMessageContainer').innerHTML = successMessage;
+    // Redirect to index.html after 5 seconds
+    setTimeout(function() {
+      window.location.href = 'index.html';
+    }, 5000);
+  }, 2000); // Delay the success message by 2 seconds before redirecting
+}
+
+
+
+}
     
     // Attach the openEmailComposer function to the button click event
     $("#composeEmailBtn").click(openEmailComposer);
