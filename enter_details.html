@@ -63,7 +63,7 @@
             <label for="phone">Enter Mobile No:</label>
             <input type="number" class="form-control" id="phone" name="phone">
           </div>
-          <button class="btn btn-primary" id="composeEmailBtn">Send</button>
+          <button class="btn btn-primary" id="composeEmailBtn">Compose Email</button>
         </div>
         <div class="card-body"><br><br>
           <p>
@@ -127,20 +127,7 @@
     });
     
     function openEmailComposer() {
-      // Define the default email details
-      var senderEmail = "sender@example.com";
-
-
-      //var ccEmails = "ma.musthafa6@gmail.com";
-      //var toEmails = "bajpehameed@gmail.com";
-      //var subject = "Rejection of Uniform Civil Code";
-
-
-    var ccEmails = "connect@mygov.nic.in, wim-rb@rb.nic.in, secy.president@rb.nic.in";
-    var toEmails = "membersecretary-lci@gov.in";
-    var subject = "Rejection of Uniform Civil Code";
       
-      // Concatenate name and phone number values in the email_body variable
       var email_body = `
       To, 
       The Member Secretary,
@@ -171,12 +158,22 @@
       Name & Phone:
       ${name}
       ${phone}`;
-      
-      // URL for opening the Gmail compose email page with pre-filled fields
-      var url = "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent(toEmails) + "&cc=" + encodeURIComponent(ccEmails) + "&su=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(email_body) + "&tf=1";
-     // var url = "mailto:" + encodeURIComponent(toEmails) + "?cc=" + encodeURIComponent(ccEmails) + "&subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(email_body);
-      // Open the Gmail compose email page in a new tab/window
-      window.open(url, "_blank");
+  
+
+      if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  //var emailSubject = encodeURIComponent('Opposition to Uniform Civil Code');
+  var subject = "Opposition to Uniform Civil Code";
+  var emailTo = 'membersecretary-lci@gov.in';
+  var emailCC = 'connect@mygov.nic.in, wim-rb@rb.nic.in, secy.president@rb.nic.in'; // Add the desired CC addresses here
+  var emailLink = 'mailto:' + emailTo + '?cc=' + emailCC + '&subject=' + subject + '&body=' + encodeURIComponent(email_body);
+  window.location.href = emailLink;
+} else {
+  var emailTo = 'membersecretary-lci@gov.in';
+  var emailCC = 'connect@mygov.nic.in, wim-rb@rb.nic.in, secy.president@rb.nic.in'; // Add the desired CC addresses here
+  var emailLink = 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=' + emailTo + '&cc=' + emailCC + '&su=Opposition%20to%20Uniform%20Civil%20Code&body=' + encodeURIComponent(email_body);
+  window.open(emailLink, '_blank');
+}
+
     }
     
     // Attach the openEmailComposer function to the button click event
